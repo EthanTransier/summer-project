@@ -1,5 +1,24 @@
-.title {
-  text-align: center;
-  font-family: regular;
-  font-size: 2rem;
+header {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  .title {
+    text-align: right;
+    margin-right: 2rem;
+    font-family: regular;
+    font-size: 3.75rem;
+    margin-top: 25px;
+    color: white;
+  }
+  h5 {
+    font-size: 1.5rem;
+    font-family: thin;
+    text-align: right;
+    color: white;
+    margin-right: 2rem;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }

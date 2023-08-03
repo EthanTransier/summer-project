@@ -78,8 +78,78 @@ summary {
   font-family: extrathin;
   src: url(../..//montserrat/static/Montserrat-Thin.ttf);
 }
-.title {
-  text-align: center;
+body {
+  overflow-x: hidden;
+}
+body .background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 58%, rgba(26, 98, 255, 0.4) 88%), url(../../images/beach2.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+body .background .cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
   font-family: regular;
-  font-size: 2rem;
+  justify-content: space-evenly;
+}
+body .background .cardContainer .card {
+  height: 11rem;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 12px;
+}
+body .background .cardContainer .card h3 {
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  text-align: right;
+  color: white;
+  font-size: 1.9rem;
+  backdrop-filter: blur(0.75px);
+  padding: 10px;
+}
+body .background .cardContainer .pickleCard {
+  background-image: url(../../images/pickleballBG.jpg);
+}
+body .background .cardContainer .crashCard {
+  background-image: url(../../images/image.png);
+}
+
+header {
+  width: 100vw;
+  height: auto;
+  position: fixed;
+}
+header .title {
+  text-align: right;
+  margin-right: 2rem;
+  font-family: regular;
+  font-size: 3.75rem;
+  margin-top: 25px;
+  color: white;
+}
+header h5 {
+  font-size: 1.5rem;
+  font-family: thin;
+  text-align: right;
+  color: white;
+  margin-right: 2rem;
+}
+header h5 a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
