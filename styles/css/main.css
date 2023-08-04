@@ -82,6 +82,7 @@ body {
   overflow-x: hidden;
 }
 body .background {
+  transition: 5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,12 +106,14 @@ body .background .cardContainer {
 body .background .cardContainer .card {
   height: 11rem;
   aspect-ratio: 16/9;
-  background-size: cover;
+  background-size: 125%;
+  background-position: 100% 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   border-radius: 12px;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 5s;
 }
 body .background .cardContainer .card h3 {
   border-radius: 12px;
@@ -119,8 +122,12 @@ body .background .cardContainer .card h3 {
   text-align: right;
   color: white;
   font-size: 1.9rem;
-  backdrop-filter: blur(0.75px);
-  padding: 10px;
+  padding-top: 15px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+body .background .cardContainer .card h3:focus {
+  border: 2px white solid;
 }
 body .background .cardContainer .pickleCard {
   background-image: url(../../images/pickleballBG.jpg);
@@ -152,4 +159,20 @@ header h5 {
 header h5 a {
   color: white;
   text-decoration: none;
+}
+
+.pickleBGAnimate {
+  animation-duration: 0.5s;
+  animation-name: pickleBGAnimation;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+}
+
+@keyframes pickleBGAnimation {
+  from {
+    background-image: url(../../images/beach2.jpg);
+  }
+  to {
+    background-image: url(../../images/pickleballBG.jpg);
+  }
 }/*# sourceMappingURL=main.css.map */

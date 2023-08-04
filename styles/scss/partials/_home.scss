@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   .background {
+    transition: 5s ease-in-out;
     @include flexCenter(row);
     justify-content: flex-end;
     background-image: linear-gradient(
@@ -21,9 +22,19 @@ body {
       .card {
         height: 11rem;
         aspect-ratio: 16/9;
-        background-size: cover;
+        background-size: 125%;
+        background-position: 100% 0%;
         @include flexCenter(row);
         border-radius: 12px;
+        transition: cubic-bezier(0.57, 0.21, 0.69, 1) 5s;
+        // &:hover {
+        //   top: 0;
+        //   left: 0;
+        //   position: absolute;
+        //   height: 100vh;
+        //   width: 100vw;
+        //   background-position: 0% 75%;
+        // }
         h3 {
           border-radius: 12px;
           height: 100%;
@@ -31,8 +42,13 @@ body {
           text-align: right;
           color: white;
           font-size: 1.9rem;
-          backdrop-filter: blur(0.75px);
-          padding: 10px;
+          // backdrop-filter: blur(0.75px);
+          padding-top: 15px;
+          padding-right: 10px;
+          cursor: pointer;
+          &:focus {
+            border: 2px white solid;
+          }
         }
       }
       .pickleCard {

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./styles/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
@@ -19,14 +21,16 @@
     </header>
     <section class="background">
         <section class="cardContainer">
-            <div class="card pickleCard">
-                <h3>Pickleball</h3>
+            <div class="card pickleCard stuff">
+                <h3 tabindex="0" onclick="changePage('pickle.html')">Pickleball</h3>
             </div>
             <div class="card crashCard">
-                <h3>Car Crash</h3>
+                <h3 tabindex="0" onclick="changePage('crash.html')">Car Crash</h3>
             </div>
         </section>
         
     </section>
+
+    <script src="./javascript/index.js"></script>
 </body>
 </html>

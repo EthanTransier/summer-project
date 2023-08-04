@@ -1,0 +1,16 @@
+// Transitions between body background images
+// Pickleball transition
+.pickleBGAnimate {
+  animation-duration: 0.5s;
+  animation-name: pickleBGAnimation;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+}
+@keyframes pickleBGAnimation {
+  from {
+    background-image: url(../../images/beach2.jpg);
+  }
+  to {
+    background-image: url(../../images/pickleballBG.jpg);
+  }
+}
