@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+  header {
+    .title {
+      font-size: clamp(2.25rem, 1.75rem + 2.667vw, 2.75rem);
+      margin-right: 0;
+      text-align: center;
+    }
+    h5 {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+  body {
+    .background {
+      .cardContainer {
+        width: 100vw;
+        .card {
+          height: clamp(9.5rem, 5rem + 24vw, 14rem);
+        }
+      }
+    }
+  }
+}

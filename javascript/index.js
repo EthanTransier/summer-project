@@ -4,11 +4,20 @@ function changePage(location){
 
 $(function(){
     $('.pickleCard').on('mouseenter', function(){
-        $('.background').addClass('.pickleBGAnimate')
+        $('.background').addClass('pickleBGAnimate')
         $('.pickleCard').css("background-image", "none")
     })
     $('.pickleCard').on('mouseleave', function(){
-        $('.background').css("background-image", "linear-gradient(0deg,rgba(255, 255, 255, 0) 58%,rgba(26, 98, 255, 0.4) 88%),url(./images/beach2.jpg)")
+        $('.background').removeClass('pickleBGAnimate')
         $('.pickleCard').css("background-image", "url(./images/pickleballBG.jpg)")
+    })
+
+    $('.crashCard').on('mouseenter', function(){
+        $('.background').addClass('crashBGAnimate')
+        $('.crashCard').css("background-image", "none")
+    })
+    $('.crashCard').on('mouseleave', function(){
+        $('.background').removeClass('crashBGAnimate')
+        $('.crashCard').css("background-image", "url(./images/sirens2.png)")
     })
 })

@@ -82,7 +82,6 @@ body {
   overflow-x: hidden;
 }
 body .background {
-  transition: 5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +98,7 @@ body .background .cardContainer {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 50vw;
+  width: clamp(37.5rem, 35rem + 6.667vw, 40.625rem);
   font-family: regular;
   justify-content: space-evenly;
 }
@@ -114,6 +113,7 @@ body .background .cardContainer .card {
   flex-direction: row;
   border-radius: 12px;
   transition: cubic-bezier(0.57, 0.21, 0.69, 1) 5s;
+  margin-top: 25px;
 }
 body .background .cardContainer .card h3 {
   border-radius: 12px;
@@ -133,7 +133,11 @@ body .background .cardContainer .pickleCard {
   background-image: url(../../images/pickleballBG.jpg);
 }
 body .background .cardContainer .crashCard {
-  background-image: url(../../images/image.png);
+  background-image: url(../../images/sirens2.png);
+}
+
+.crashTitle {
+  text-shadow: 2px 2px 2px red;
 }
 
 header {
@@ -145,7 +149,7 @@ header .title {
   text-align: right;
   margin-right: 2rem;
   font-family: regular;
-  font-size: 3.75rem;
+  font-size: clamp(2.75rem, 0.75rem + 5.333vw, 3.75rem);
   margin-top: 25px;
   color: white;
 }
@@ -162,17 +166,53 @@ header h5 a {
 }
 
 .pickleBGAnimate {
+  background-size: cover;
   animation-duration: 0.5s;
   animation-name: pickleBGAnimation;
   animation-timing-function: ease-in;
   animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 
 @keyframes pickleBGAnimation {
-  from {
+  0% {
     background-image: url(../../images/beach2.jpg);
   }
-  to {
-    background-image: url(../../images/pickleballBG.jpg);
+  100% {
+    background-image: url(../../images/pickleballBG2.jpg);
+  }
+}
+.crashBGAnimate {
+  background-size: cover;
+  animation-duration: 0.5s;
+  animation-name: crashBGAnimation;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes crashBGAnimation {
+  0% {
+    background-image: url(../../images/beach2.jpg);
+  }
+  100% {
+    background-image: url(../../images/image.png);
+  }
+}
+@media (max-width: 600px) {
+  header .title {
+    font-size: clamp(2.25rem, 1.75rem + 2.667vw, 2.75rem);
+    margin-right: 0;
+    text-align: center;
+  }
+  header h5 {
+    text-align: center;
+    margin-right: 0;
+  }
+  body .background .cardContainer {
+    width: 100vw;
+  }
+  body .background .cardContainer .card {
+    height: clamp(9.5rem, 5rem + 24vw, 14rem);
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,16 +1,35 @@
 // Transitions between body background images
 // Pickleball transition
 .pickleBGAnimate {
+  background-size: cover;
   animation-duration: 0.5s;
   animation-name: pickleBGAnimation;
   animation-timing-function: ease-in;
   animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 @keyframes pickleBGAnimation {
-  from {
+  0% {
     background-image: url(../../images/beach2.jpg);
   }
-  to {
-    background-image: url(../../images/pickleballBG.jpg);
+  100% {
+    background-image: url(../../images/pickleballBG2.jpg);
+  }
+}
+
+.crashBGAnimate {
+  background-size: cover;
+  animation-duration: 0.5s;
+  animation-name: crashBGAnimation;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes crashBGAnimation {
+  0% {
+    background-image: url(../../images/beach2.jpg);
+  }
+  100% {
+    background-image: url(../../images/image.png);
   }
 }

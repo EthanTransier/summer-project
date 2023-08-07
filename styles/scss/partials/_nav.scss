@@ -6,7 +6,7 @@ header {
     text-align: right;
     margin-right: 2rem;
     font-family: regular;
-    font-size: 3.75rem;
+    font-size: clamp(2.75rem, 0.75rem + 5.333vw, 3.75rem);
     margin-top: 25px;
     color: white;
   }
