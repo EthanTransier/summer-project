@@ -1,3 +1,29 @@
-.crashTitle {
-  text-shadow: 2px 2px 2px red;
+header {
+  z-index: 2;
+  .crashTitle {
+    text-shadow: 3px 3px 2px rgb(198, 0, 0);
+  }
+}
+
+.crashBackground2 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../images/nightBG.jpg);
+  background-size: cover;
+  filter: grayscale(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.infoContainer {
+  width: 100vw;
+  height: auto;
+  @include flexCenter(column);
+  .whereCard {
+    width: 25vw;
+    aspect-ratio: 3/1;
+    background-color: black;
+    box-shadow: 3px 3px rgb(52, 167, 255);
+  }
 }

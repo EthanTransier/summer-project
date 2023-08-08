@@ -3,13 +3,6 @@ body {
   .background {
     @include flexCenter(row);
     justify-content: flex-end;
-    background-image: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0) 58%,
-        rgba(26, 98, 255, 0.4) 88%
-      ),
-      url(../../images/beach2.jpg);
-    background-size: cover;
     height: 100vh;
     width: 100vw;
     .cardContainer {
@@ -18,14 +11,17 @@ body {
       width: clamp(37.5rem, 35rem + 6.667vw, 40.625rem);
       font-family: regular;
       justify-content: space-evenly;
+      a {
+        text-decoration: none;
+      }
       .card {
-        height: 11rem;
+        height: clamp(9rem, 7.286rem + 4.571vw, 11rem);
         aspect-ratio: 16/9;
         background-size: 125%;
         background-position: 100% 0%;
         @include flexCenter(row);
         border-radius: 12px;
-        transition: cubic-bezier(0.57, 0.21, 0.69, 1) 5s;
+        transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.25s;
         margin-top: 25px;
         h3 {
           border-radius: 12px;
@@ -38,6 +34,7 @@ body {
           padding-top: 15px;
           padding-right: 10px;
           cursor: pointer;
+          text-decoration: none;
           &:focus {
             border: 2px white solid;
           }

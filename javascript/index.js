@@ -1,23 +1,24 @@
-function changePage(location){
-    window.location.href = location;
-}
-
 $(function(){
     $('.pickleCard').on('mouseenter', function(){
-        $('.background').addClass('pickleBGAnimate')
-        $('.pickleCard').css("background-image", "none")
+        $('.beachBackground').css("opacity", "0")
+        $('.pickleCard').css("opacity", "0")
+        $('.pickleBackground').css("opacity", '1')
     })
     $('.pickleCard').on('mouseleave', function(){
-        $('.background').removeClass('pickleBGAnimate')
-        $('.pickleCard').css("background-image", "url(./images/pickleballBG.jpg)")
+        $('.beachBackground').css("opacity", "1")
+        $('.pickleCard').css("opacity", "1")
+        $('.pickleBackground').css("opacity", '0')
     })
 
     $('.crashCard').on('mouseenter', function(){
-        $('.background').addClass('crashBGAnimate')
-        $('.crashCard').css("background-image", "none")
+        $('.beachBackground').css("opacity", "0")
+        $('.crashCard').css("opacity", "0")
+        $('.crashBackground').css("opacity", '1')
+        
     })
     $('.crashCard').on('mouseleave', function(){
-        $('.background').removeClass('crashBGAnimate')
-        $('.crashCard').css("background-image", "url(./images/sirens2.png)")
+        $('.beachBackground').css("opacity", "1")
+        $('.crashCard').css("opacity", "1")
+        $('.crashBackground').css("opacity", '0')
     })
 })

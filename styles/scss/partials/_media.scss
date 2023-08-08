@@ -1,3 +1,13 @@
+@media (min-width: 1300px) {
+  body {
+    .background {
+      .cardContainer {
+        width: 50vw;
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   header {
     .title {

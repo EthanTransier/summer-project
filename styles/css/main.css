@@ -87,8 +87,6 @@ body .background {
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 58%, rgba(26, 98, 255, 0.4) 88%), url(../../images/beach2.jpg);
-  background-size: cover;
   height: 100vh;
   width: 100vw;
 }
@@ -102,8 +100,11 @@ body .background .cardContainer {
   font-family: regular;
   justify-content: space-evenly;
 }
+body .background .cardContainer a {
+  text-decoration: none;
+}
 body .background .cardContainer .card {
-  height: 11rem;
+  height: clamp(9rem, 7.286rem + 4.571vw, 11rem);
   aspect-ratio: 16/9;
   background-size: 125%;
   background-position: 100% 0%;
@@ -112,7 +113,7 @@ body .background .cardContainer .card {
   align-items: center;
   flex-direction: row;
   border-radius: 12px;
-  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 5s;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.25s;
   margin-top: 25px;
 }
 body .background .cardContainer .card h3 {
@@ -125,6 +126,7 @@ body .background .cardContainer .card h3 {
   padding-top: 15px;
   padding-right: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
 body .background .cardContainer .card h3:focus {
   border: 2px white solid;
@@ -136,8 +138,74 @@ body .background .cardContainer .crashCard {
   background-image: url(../../images/sirens2.png);
 }
 
-.crashTitle {
-  text-shadow: 2px 2px 2px red;
+.beachBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 58%, rgba(26, 98, 255, 0.4) 88%), url(../../images/beach2.jpg);
+  background-size: cover;
+  opacity: 1;
+  z-index: -1;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
+}
+
+.pickleBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/pickleballBG2.jpg);
+  opacity: 0;
+  z-index: -1;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
+}
+
+.crashBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/image.png);
+  opacity: 0;
+  z-index: -1;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
+}
+
+header {
+  z-index: 2;
+}
+header .crashTitle {
+  text-shadow: 3px 3px 2px rgb(198, 0, 0);
+}
+
+.crashBackground2 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../images/nightBG.jpg);
+  background-size: cover;
+  filter: grayscale(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.infoContainer {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.infoContainer .whereCard {
+  width: 25vw;
+  aspect-ratio: 3/1;
+  background-color: black;
+  box-shadow: 3px 3px rgb(52, 167, 255);
 }
 
 header {
@@ -165,38 +233,9 @@ header h5 a {
   text-decoration: none;
 }
 
-.pickleBGAnimate {
-  background-size: cover;
-  animation-duration: 0.5s;
-  animation-name: pickleBGAnimation;
-  animation-timing-function: ease-in;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-@keyframes pickleBGAnimation {
-  0% {
-    background-image: url(../../images/beach2.jpg);
-  }
-  100% {
-    background-image: url(../../images/pickleballBG2.jpg);
-  }
-}
-.crashBGAnimate {
-  background-size: cover;
-  animation-duration: 0.5s;
-  animation-name: crashBGAnimation;
-  animation-timing-function: ease-in;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-}
-
-@keyframes crashBGAnimation {
-  0% {
-    background-image: url(../../images/beach2.jpg);
-  }
-  100% {
-    background-image: url(../../images/image.png);
+@media (min-width: 1300px) {
+  body .background .cardContainer {
+    width: 50vw;
   }
 }
 @media (max-width: 600px) {

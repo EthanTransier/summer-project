@@ -1,0 +1,41 @@
+.beachBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 58%,
+      rgba(26, 98, 255, 0.4) 88%
+    ),
+    url(../../images/beach2.jpg);
+  background-size: cover;
+  opacity: 1;
+  z-index: -1;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
+}
+
+.pickleBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/pickleballBG2.jpg);
+  opacity: 0;
+  z-index: -1;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
+}
+
+.crashBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/image.png);
+  opacity: 0;
+  z-index: -1;
+  transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
+}
