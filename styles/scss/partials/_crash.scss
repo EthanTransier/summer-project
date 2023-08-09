@@ -1,3 +1,7 @@
+.crashBody {
+  background-color: black;
+}
+
 header {
   z-index: 2;
   .crashTitle {
@@ -19,11 +23,42 @@ header {
 .infoContainer {
   width: 100vw;
   height: auto;
-  @include flexCenter(column);
-  .whereCard {
-    width: 25vw;
+  @include flexCenter(row);
+  justify-content: space-evenly;
+  position: absolute;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-family: light;
+  .crashCard {
+    @include flexCenter(column);
+    width: clamp(13rem, 5.067rem + 14.933vw, 20rem);
+    height: 100%;
     aspect-ratio: 3/1;
-    background-color: black;
+    background-color: rgb(25, 25, 25);
+    margin-top: 10rem;
+    h3 {
+      padding: 5px;
+      font-size: clamp(1.2rem, 0.52rem + 1.28vw, 1.8rem);
+    }
+    iframe {
+      width: clamp(13rem, 5.067rem + 14.933vw, 20rem);
+      aspect-ratio: 1/1;
+    }
+    img {
+      width: clamp(13rem, 5.067rem + 14.933vw, 20rem);
+    }
+    p {
+      font-size: clamp(1rem, 0.717rem + 0.533vw, 1.25rem);
+      font-family: thin;
+      padding: 10px;
+    }
+  }
+  .whereCard,
+  .howCard {
     box-shadow: 3px 3px rgb(52, 167, 255);
+  }
+  .personCard {
+    box-shadow: 3px 3px rgb(198, 0, 0);
   }
 }

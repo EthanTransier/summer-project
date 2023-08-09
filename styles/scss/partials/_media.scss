@@ -8,6 +8,29 @@
   }
 }
 
+@media (max-width: 850px) {
+  .infoContainer {
+    flex-direction: column;
+    margin-top: 2.75rem;
+    .crashCard {
+      width: clamp(16rem, 8rem + 42.667vw, 20rem);
+      h3 {
+        font-size: clamp(1.45rem, 0.85rem + 3.2vw, 1.75rem);
+      }
+      iframe {
+        width: clamp(16rem, 8rem + 42.667vw, 20rem);
+        height: clamp(16rem, 8rem + 42.667vw, 20rem);
+      }
+      img {
+        width: clamp(16rem, 8rem + 42.667vw, 20rem);
+      }
+      p {
+        font-size: clamp(1.15rem, 0.95rem + 1.067vw, 1.25rem);
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   header {
     .title {

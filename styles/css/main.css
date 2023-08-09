@@ -54,7 +54,6 @@ summary {
   margin: 0px;
   padding: 0px;
   border: 0px;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -175,6 +174,10 @@ body .background .cardContainer .crashCard {
   transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
 }
 
+.crashBody {
+  background-color: black;
+}
+
 header {
   z-index: 2;
 }
@@ -199,13 +202,47 @@ header .crashTitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-family: light;
 }
-.infoContainer .whereCard {
-  width: 25vw;
+.infoContainer .crashCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: clamp(13rem, 5.067rem + 14.933vw, 20rem);
+  height: 100%;
   aspect-ratio: 3/1;
-  background-color: black;
+  background-color: rgb(25, 25, 25);
+  margin-top: 10rem;
+}
+.infoContainer .crashCard h3 {
+  padding: 5px;
+  font-size: clamp(1.2rem, 0.52rem + 1.28vw, 1.8rem);
+}
+.infoContainer .crashCard iframe {
+  width: clamp(13rem, 5.067rem + 14.933vw, 20rem);
+  aspect-ratio: 1/1;
+}
+.infoContainer .crashCard img {
+  width: clamp(13rem, 5.067rem + 14.933vw, 20rem);
+}
+.infoContainer .crashCard p {
+  font-size: clamp(1rem, 0.717rem + 0.533vw, 1.25rem);
+  font-family: thin;
+  padding: 10px;
+}
+.infoContainer .whereCard,
+.infoContainer .howCard {
   box-shadow: 3px 3px rgb(52, 167, 255);
+}
+.infoContainer .personCard {
+  box-shadow: 3px 3px rgb(198, 0, 0);
 }
 
 header {
@@ -236,6 +273,28 @@ header h5 a {
 @media (min-width: 1300px) {
   body .background .cardContainer {
     width: 50vw;
+  }
+}
+@media (max-width: 850px) {
+  .infoContainer {
+    flex-direction: column;
+    margin-top: 2.75rem;
+  }
+  .infoContainer .crashCard {
+    width: clamp(16rem, 8rem + 42.667vw, 20rem);
+  }
+  .infoContainer .crashCard h3 {
+    font-size: clamp(1.45rem, 0.85rem + 3.2vw, 1.75rem);
+  }
+  .infoContainer .crashCard iframe {
+    width: clamp(16rem, 8rem + 42.667vw, 20rem);
+    height: clamp(16rem, 8rem + 42.667vw, 20rem);
+  }
+  .infoContainer .crashCard img {
+    width: clamp(16rem, 8rem + 42.667vw, 20rem);
+  }
+  .infoContainer .crashCard p {
+    font-size: clamp(1.15rem, 0.95rem + 1.067vw, 1.25rem);
   }
 }
 @media (max-width: 600px) {
