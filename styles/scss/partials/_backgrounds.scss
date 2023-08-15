@@ -28,6 +28,18 @@
   transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
 }
 
+.mainPickleBackground {
+  width: 100vw;
+  height: 150vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/court.jpg);
+  background-size: cover;
+  background-position: top right;
+  z-index: -1;
+}
+
 .crashBackground {
   width: 100vw;
   height: 100vh;

@@ -162,6 +162,18 @@ body .background .cardContainer .crashCard {
   transition: cubic-bezier(0.57, 0.21, 0.69, 1) 0.5s;
 }
 
+.mainPickleBackground {
+  width: 100vw;
+  height: 150vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/court.jpg);
+  background-size: cover;
+  background-position: top right;
+  z-index: -1;
+}
+
 .crashBackground {
   width: 100vw;
   height: 100vh;
@@ -243,6 +255,43 @@ header .crashTitle {
 }
 .infoContainer .personCard {
   box-shadow: 3px 3px rgb(198, 0, 0);
+}
+
+body .pickleTitle {
+  text-shadow: 3px 3px 2px rgb(62, 205, 0);
+}
+body .mainArea {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: clamp(12rem, 9.647rem + 15.059vw, 20rem);
+}
+body .mainArea .box {
+  background-color: rgba(0, 0, 0, 0.644);
+  width: 100%;
+}
+body .mainArea .box h2 {
+  text-align: center;
+  color: white;
+  font-family: thin;
+  font-size: clamp(2rem, 1.706rem + 1.882vw, 3rem);
+  padding-top: 1rem;
+}
+body .mainArea .box p {
+  text-align: center;
+  color: white;
+  font-family: regular;
+  font-size: clamp(1.05rem, 0.918rem + 0.847vw, 1.5rem);
+  padding-top: 1rem;
+  padding-left: clamp(2rem, -0.941rem + 18.824vw, 12rem);
+  padding-right: clamp(2rem, -0.941rem + 18.824vw, 12rem);
+  padding-bottom: 2rem;
+}
+body .mainArea .box2 {
+  margin-top: clamp(10rem, 8.824rem + 7.529vw, 14rem);
 }
 
 header {

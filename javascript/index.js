@@ -22,3 +22,13 @@ $(function(){
         $('.crashBackground').css("opacity", '0')
     })
 })
+
+
+window.addEventListener('scroll', function() {
+  const parallax = document.querySelector('.test');
+  const scrolled = window.scrollY;
+
+  // Adjust the background position based on scroll position
+  const parallaxBg = document.querySelector('.mainPickleBackground');
+  parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+});
